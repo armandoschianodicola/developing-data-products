@@ -9,7 +9,6 @@
 
 library(shiny)
 
-# Define UI for application that draws a histogram
 shinyUI(navbarPage(
         title = "Iris Data",
         tabPanel("Plot",
