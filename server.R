@@ -14,12 +14,12 @@ library(ggplot2)
 shinyServer(function(input, output) {
         
         output$plot1 <- renderPlot({
-                gg <- ggplot(iris, aes_string(x = input$var_x,
-                                              y = input$var_y,
-                                              color = "Species")
-                             )
-                gg + geom_point() 
-                gg + ggtitle(paste(input$var_y, 'versus', input$var_x))
+                ggplot(iris, aes_string(x = input$var_x,
+                                        y = input$var_y,
+                                        color = "Species")
+                       ) + 
+                        geom_point() +
+                        ggtitle(paste(input$var_y, 'versus', input$var_x))
                 })
         })
 
